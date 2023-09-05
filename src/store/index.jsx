@@ -12,7 +12,7 @@ const message = (state = [], action) => {
 
 export const fetchMessage = () => {
   return async (dispatch) => {
-    const { data } = await axios.get("http://localhost:5000/apis/app1");
+    const { data } = await axios.get("https://multi-server-test.onrender.com/apis/app1");
     console.log(data);
     dispatch({ type: "SET_MESSAGE", message: data });
   };
